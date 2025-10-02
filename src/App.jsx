@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundImage from "./assets/backgroundImage.png"
-
+import Header from "./Component/Header";
 function App() {
   
   return (
@@ -10,14 +10,8 @@ function App() {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Header */}
-      <div className="w-full max-w-md flex justify-between items-center mb-4">
-        <h1 className="text-xl font-semibold">Predictor</h1>
-        <select className="border rounded-lg px-2 py-1 text-sm">
-          <option>Akinyele</option>
-          <option>Ibadan</option>
-          <option>Lagos</option>
-        </select>
-        </div> 
+      
+      <Header/>
         {/* Prediction Card */}
       <div className="w-full max-w-md bg-[#539BF9] rounded-2xl shadow p-4 mb-4">
         <div className="flex justify-between items-center mb-4">
