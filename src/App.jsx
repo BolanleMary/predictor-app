@@ -10,8 +10,8 @@ function App() {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Header */}
-      
-      <Header/>
+            <Header/>
+            
         {/* Prediction Card */}
       <div className="w-full max-w-md bg-[#539BF9] rounded-2xl shadow p-4 mb-4">
         <div className="flex justify-between items-center mb-4">
