@@ -1,6 +1,6 @@
 import React from "react";
 import backgroundImage from "./assets/backgroundImage.png"
-import Header from "./Component/Header";
+import Header from "./components/Header";
 function App() {
   
   return (
