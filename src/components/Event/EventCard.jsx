@@ -1,16 +1,15 @@
-import React from "react";
 import { format, isToday, isTomorrow, isYesterday, parseISO } from "date-fns";
 
 function dateLabel(date) {
-  const parseData = parseISO(date);
-  if (isToday(parseData)) {
+  const parsedData = parseISO(date);
+  if (isToday(parsedData)) {
     return "Today";
-  } else if (isTomorrow(parseData)) {
+  } else if (isTomorrow(parsedData)) {
     return "Tomorrow";
-  } else if (isYesterday(parseData)) {
+  } else if (isYesterday(parsedData)) {
     return "Yesterday";
   } else {
-    return format(parseData, "MMM d");
+    return format(parsedData, "MMM d");
   }
 }
 function rainMap(rain) {
@@ -41,10 +40,12 @@ function rainMap(rain) {
     };
   }
 }
-function EventCard(rain, date) {
+function EventCard({rain, date}) {
   return (
-    <div className="p-2 rounded-lg bg-gray-300 text-center text-xs">
-      <p>{dateLabel(date)}</p>
+    <div className={`p-2 rounded-lg text-center text-xs ${
+      rainMap(rain).type !== "extreme"? "bg-[#A6A6A6]" : "bg-[#FF0505]"
+    }`}>
+       <p>{dateLabel(date)}</p> 
       <p>{rainMap(rain).type}</p>
       <p>{rainMap(rain).action}</p>
     </div>
