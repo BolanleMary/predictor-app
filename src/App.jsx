@@ -33,7 +33,7 @@ function App() {
           </div>
         </div>
         {/* Event History */}
-        <div className="w-full max-w-md border border-thin grid grid-cols-4 gap-2 mb-4">
+        <div className="w-full mb-4">
           <Event />
         </div>
         {/* Weather Info */}
