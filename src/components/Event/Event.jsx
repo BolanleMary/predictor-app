@@ -6,13 +6,8 @@ import "swiper/css";
 function Event() {
   return (
     <Swiper
-      breakpoints={{
-        320: { slidesPerView: 1 },
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 },
-      }}
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={4}
       initialSlide={3}
       resistance={true}
       resistanceRatio={0.85}
